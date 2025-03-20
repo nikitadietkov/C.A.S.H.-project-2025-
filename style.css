@@ -58,12 +58,13 @@ header .logo {
     /* position: absolute; */
 
     display: grid;
-    grid-template-columns: 45% 40%;
+    grid-template-columns: 1.7fr 1fr;
+    grid-gap: 1em;
     justify-content: space-between;
 
     height: max-content;
 
-    padding: 2% 2% 2% 10%;
+    padding: 2% 2% 2% 6%;
     color: white;
     border-radius: 45px;
     border: 1px solid white;
@@ -86,17 +87,21 @@ header .logo {
     right: -60px;
     list-style: none;
     margin-left: 20px;
+    
 }
 
 .slick-dots li button {
     width: 50px;
     height: 50px;
+    margin: 2px 0;
 
     border-radius: 45px;
     border: 1px solid white;
     background-color: #00000080;
+    transition: .4s;
 }
 .slick-dots li.slick-active button {
+    border: 1px solid #00000080;
     background-color: #ffffff;
 }
 
