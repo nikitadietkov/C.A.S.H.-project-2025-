@@ -67,6 +67,8 @@
 }
 
 .game .choice-html .result-html  {
+    display: flex;
+    justify-content: center;
     button {
         height: 50%;
         width: 30%;
@@ -82,8 +84,7 @@
         background-color: #3E7B27;
     }
     h3 {
-        width: 60%;
-        text-align: end;
+        text-align: center;
         display: none;
         opacity: 0;
     }

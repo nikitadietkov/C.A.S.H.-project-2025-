@@ -144,23 +144,28 @@ function drawTask(element) {
 
 function showDescription(id) {
     if (id === "pos") {
-        $("#neg-result-value-html").prop('disabled', true).hide(200);
-        $("#pos-result-value-html").animate({ height: 0, opacity: 0 }, 300, function () {
+        drawTask(`
+            <div class="card-task">
+            <h2>${gameState.task.event}</h2>
+            <div class="choice-html">
+            <div class="pos-result-html result-html">
+            <button id="pos-result-value-html">${gameState.task['pos-result-title']}</button>
+            <h3 class="pos-result-descripton-html">${gameState.task['pos-result-description']}</h3>
+            </div>
+            <div class="continue">
+            <button id="next-task-html" onclick="continueGame('pos')">ПРОДОВЖИТИ</button>
+            </div>
+            </div>
+            </div>`);
+            $("#neg-result-value-html").prop('disabled', true).hide(200);
+            $("#pos-result-value-html").animate({ height: 0, opacity: 0 }, 300, function () {
             $(this).css('display', 'none');
-            $(".pos-result-descripton-html").css('display', 'block').animate({ opacity: 1 }, 300);
-            drawTask(`
-                <div class="card-task">
-                    <h2>${gameState.task.event}</h2>
-                    <div class="choice-html">
-                        <div class="pos-result-html result-html">
-                            <button id="pos-result-value-html">${gameState.task['pos-result-title']}</button>
-                            <h3 class="pos-result-descripton-html">${gameState.task['pos-result-description']}</h3>
-                        </div>
-                        <div class="continue">
-                            <button id="next-task-html" onclick="continueGame('pos')">ПРОДОВЖИТИ</button>
-                        </div>
-                    </div>
-                </div>`);
+                $(".pos-result-descripton-html").css('display', 'block').animate({ opacity: 1 }, 300);
+                
+                $("#next-task-html").show().animate({
+                    height: '100px',
+                    opacity: 1
+                })
         });
     } else {
         $("#pos-result-value-html").prop('disabled', true).hide(200);
@@ -237,7 +242,7 @@ function drawFinal() {
     createHistogram(gameState.historyBalance);
     $(".final-page").show();
     
-    localStorage.clear();
+    // localStorage.clear();
 }
 
 function createHistogram(data) {
