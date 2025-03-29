@@ -1,9 +1,9 @@
-const url = "https://project-face.restdb.io/rest/task-with-choice"
-const headers = {
-    "content-type": "application/json",
-    "x-apikey": "67d5cc52a6de009d7180cb5d",
-    "cache-control": "no-cache"
-}
+const url = "./db.json"
+// const headers = {
+//     "content-type": "application/json",
+//     "x-apikey": "67d5cc52a6de009d7180cb5d",
+//     "cache-control": "no-cache"
+// }
 
 
 
@@ -83,15 +83,13 @@ function updateLocalStorage() {
 
 function getData() {
     
-    fetch(url, {
-        method: "GET",
-        headers: headers
-    })
+    fetch(url)
         .then(async function (response) {
             let data = await response.json()
             gameState.data = data
+            console.log(data)
         })
-}
+    }
 
 
 function generateTask() {

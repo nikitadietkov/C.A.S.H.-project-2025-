@@ -1,6 +1,5 @@
 [
     {
-        "_id": "67e65f1b82dee35a00010d5a",
         "event": "Відключили електроенергію через несплачений рахунок.",
         "neg-result-description": "Заощадив гроші, але не міг нормально працювати (+12 втоми).",
         "pos-result-description": "Втратив (-5000 грн), але проблему вирішено. Через стрес почуваєшся виснаженим (+7 втоми).",
@@ -11,15 +10,8 @@
         "pos-result-value": -5000,
         "pos-result-title": "Заплатити негайно",
         "neg-result-title": "Залишитися без світла",
-        "id": 0,
-        "_created": "2025-03-28T08:34:35.720Z",
-        "_changed": "2025-03-28T08:34:35.720Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 0
-    },
-    {
-        "_id": "67d5c8fd82dee35a00001525",
+        "id": 0
+    },{
         "id": 1,
         "pos-result-description": "Друг вдячний (-5000 грн), але чи поверне гроші – невідомо (-3 втоми).",
         "neg-result-description": "Ви залишилися друзями, але він трохи образився (+2 втоми).",
@@ -27,18 +19,12 @@
         "pos-result-value": -5000,
         "neg-result-value": -0.03,
         "event": "Друг попросив позичити гроші.",
-        "_created": "2025-03-15T18:37:49.860Z",
-        "_changed": "2025-03-27T18:53:22.840Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 12,
+
         "pos-fatigue-value": -3,
         "neg-fatigue-value": 2,
         "pos-result-title": "Позичити",
         "neg-result-title": "Відмовити"
-    },
-    {
-        "_id": "67d88fe082dee35a000039d9",
+    },{
         "id": 2,
         "pos-result-description": "Ти чесний (-2 втоми), але гроші довелося повернути.",
         "event": "Роботодавець помилково нарахував тобі більше зарплати.",
@@ -46,18 +32,11 @@
         "probability": 0.1,
         "pos-result-value": 0,
         "neg-result-value": -500,
-        "_created": "2025-03-17T21:10:56.682Z",
-        "_changed": "2025-03-28T08:09:57.886Z",
-        "_createdby": "randrii2011@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 8,
         "pos-fatigue-value": -2,
         "neg-fatigue-value": 5,
         "pos-result-title": "Повідомити",
         "neg-result-title": "Залишити собі"
-    },
-    {
-        "_id": "67d8344a82dee35a00003694",
+    },{
         "id": 3,
         "pos-result-description": "Відпочив (-8 втоми), але витратив гроші (-3000 грн).",
         "neg-result-description": "Заощадив, але почуваєшся трохи ізольованим (+1 втома). ",
@@ -65,18 +44,12 @@
         "pos-result-value": -3000,
         "neg-result-value": 0,
         "event": "Друзі запросили на вихідні за місто.",
-        "_created": "2025-03-17T14:40:10.296Z",
-        "_changed": "2025-03-28T08:10:06.144Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 7,
+
         "pos-fatigue-value": -8,
         "neg-fatigue-value": 1,
         "pos-result-title": "Поїхати",
         "neg-result-title": "Залишитися вдома"
-    },
-    {
-        "_id": "67d8348182dee35a00003699",
+    },{
         "id": 4,
         "pos-result-description": "Прибуток несподіваний (+1000 грн), але трохи соромно (+1 втома).",
         "neg-result-description": "Ти зробив правильний вибір, але грошей не отримав.",
@@ -84,37 +57,19 @@
         "pos-result-value": 1000,
         "neg-result-value": 0,
         "event": "Ти випадково знайшов гроші на вулиці.",
-        "_created": "2025-03-17T14:41:05.078Z",
-        "_changed": "2025-03-28T08:10:23.583Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 8,
         "pos-fatigue-value": 1,
         "neg-fatigue-value": 0,
         "pos-result-title": "Взяти",
         "neg-result-title": "Здати в поліцію"
-    },
-    {
-        "_id": "67e50a1b82dee35a0000f753",
+    },{
         "pos-result-description": "Пухнастий друг здоровий (+2 втоми), але гаманець постраждав (-7000 грн).",
         "neg-result-description": "Тобі шкода улюбленця, це гнітить (+8 втоми). ",
         "event": "Ветеринарний рахунок за лікування домашнього улюбленця.",
         "probability": 0.1,
         "neg-fatigue-value": 8,
         "pos-fatigue-value": 2,
-        "id": 5,
-        "neg-result-value": 0,
-        "pos-result-value": -7000,
-        "pos-result-title": "Заплатити",
-        "neg-result-title": "Відмовитися від лікування",
-        "_created": "2025-03-27T08:19:39.973Z",
-        "_changed": "2025-03-28T08:10:31.636Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 4
-    },
-    {
-        "_id": "67e50a6782dee35a0000f75a",
+        "id": 5
+    },{
         "pos-result-description": "Витратив гроші (-5000 грн), але не довелося довго мучитися (-3 втоми).",
         "neg-result-description": "Деякий час довелося обходитися без гарячої води (+6 втоми).",
         "event": "Поламався бойлер у квартирі.",
@@ -125,15 +80,8 @@
         "pos-result-value": -5000,
         "pos-result-title": "Полагодити",
         "neg-result-title": "Чекати зарплати",
-        "id": 6,
-        "_created": "2025-03-27T08:20:55.233Z",
-        "_changed": "2025-03-28T08:09:44.758Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 3
-    },
-    {
-        "_id": "67e50cce82dee35a0000f7a0",
+        "id": 6
+    },{
         "pos-result-description": "Ти вчинив чесно, але це коштувало грошей (-6000 грн).",
         "event": "Ти зачепив чуже авто на парковці.",
         "probability": 0.12,
@@ -143,16 +91,8 @@
         "pos-result-value": -6000,
         "pos-result-title": "Заплатити за ремонт",
         "neg-result-title": "Втекти",
-        "id": 7,
-        "neg-result-description": "Ніхто не помітив, але почуття провини гризе (+5 втоми).",
-        "_created": "2025-03-27T08:31:10.270Z",
-        "_changed": "2025-03-28T08:12:17.045Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 2
-    },
-    {
-        "_id": "67e59c1f82dee35a00010666",
+        "id": 7
+    },{
         "pos-result-description": "Заробив гроші (+6000 грн), але дуже втомився (+12 втоми).",
         "neg-result-description": "Залишився без додаткового доходу, але не перевтомився.",
         "event": "Отримав пропозицію підробітку у вихідні.",
@@ -163,15 +103,8 @@
         "pos-result-value": 6000,
         "pos-result-title": "Погодитися",
         "neg-result-title": "Відмовитися",
-        "id": 8,
-        "_created": "2025-03-27T18:42:39.366Z",
-        "_changed": "2025-03-28T08:12:53.518Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 1
-    },
-    {
-        "_id": "67e59c6c82dee35a0001066a",
+        "id": 8
+    },{
         "pos-result-description": "Витратив гроші (-2000 грн), але покращив стосунки на роботі (-2 втоми).",
         "neg-result-description": "Заощадив, але колеги поставилися до тебе з недовірою (+1 втома).",
         "probability": 0.3,
@@ -181,16 +114,8 @@
         "pos-result-value": -2000,
         "pos-result-title": "Скинутися",
         "neg-result-title": "Відмовитися",
-        "id": 9,
-        "event": "Колега пропонує скинутися на спільний подарунок начальнику.",
-        "_created": "2025-03-27T18:43:56.463Z",
-        "_changed": "2025-03-28T08:13:10.560Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 5
-    },
-    {
-        "_id": "67e59cde82dee35a00010674",
+        "id": 9
+    },{
         "event": "Отримав премію за хороший проєкт.",
         "neg-result-description": "Колеги здивовані твоїм рішенням, але нічого не змінилося.",
         "pos-result-description": "Отримав бонус (+7000 грн), але начальство тепер очікує від тебе ще більшої продуктивності (+5 втоми).",
@@ -201,15 +126,8 @@
         "pos-result-value": 7000,
         "pos-result-title": "Взяти гроші",
         "neg-result-title": "Відмовитися",
-        "id": 10,
-        "_created": "2025-03-27T18:45:50.520Z",
-        "_changed": "2025-03-28T08:13:50.315Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 1
-    },
-    {
-        "_id": "67e59d2282dee35a00010678",
+        "id": 10
+    },{
         "neg-result-description": "Ти не ризикнув, але залишив гроші при собі.",
         "pos-result-description": "Бізнес пішов непогано (+10000 грн), отримав прибуток, але довелося попрацювати над запуском (+7 втоми).",
         "probability": 0.15,
@@ -219,16 +137,8 @@
         "pos-result-value": 10000,
         "pos-result-title": "Вкласти гроші",
         "neg-result-title": "Відмовитися",
-        "id": 11,
-        "event": "Друзі пропонують інвестувати в спільний бізнес.",
-        "_created": "2025-03-27T18:46:58.089Z",
-        "_changed": "2025-03-28T08:14:25.749Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 2
-    },
-    {
-        "_id": "67e59d8c82dee35a0001067f",
+        "id": 11
+    },{
         "event": "Виграв у лотерею.",
         "neg-result-description": "Програв трохи грошей (-500 грн) та змарнував час (+6 втоми).",
         "pos-result-description": "Отримав випадкову суму (+3000 грн), але відчув хвилювання (+3 втоми).",
@@ -239,15 +149,8 @@
         "pos-result-value": 3000,
         "pos-result-title": "Забрати виграш",
         "neg-result-title": "Купити ще білетів",
-        "id": 12,
-        "_created": "2025-03-27T18:48:44.729Z",
-        "_changed": "2025-03-28T08:20:05.038Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 4
-    },
-    {
-        "_id": "67e59e5482dee35a0001068c",
+        "id": 12
+    },{
         "event": "Отримав несподіваний грошовий подарунок від родича.",
         "neg-result-description": "Родич не наполягав, але ти залишився без бонусу.",
         "pos-result-description": "Отримав певну суму (+4000 грн) та приємні емоції (-3 втоми).",
@@ -258,15 +161,8 @@
         "pos-result-value": 4000,
         "pos-result-title": "Прийняти",
         "neg-result-title": "Відмовитися",
-        "id": 13,
-        "_created": "2025-03-27T18:52:04.208Z",
-        "_changed": "2025-03-27T18:52:04.208Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 0
-    },
-    {
-        "_id": "67e65b2382dee35a00010d23",
+        "id": 13
+    },{
         "event": "Випадково знайшов 500 грн на вулиці.",
         "neg-result-description": "Вирішив не брати чужі гроші, нічого не змінилося.",
         "pos-result-description": "Легкі гроші (+500 грн), але трохи неприємне відчуття (+1 втома).",
@@ -277,15 +173,8 @@
         "pos-result-value": 500,
         "pos-result-title": "Забрати",
         "neg-result-title": "Залишити на місці",
-        "id": 14,
-        "_created": "2025-03-28T08:17:39.837Z",
-        "_changed": "2025-03-28T08:17:39.837Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 0
-    },
-    {
-        "_id": "67e65b8282dee35a00010d29",
+        "id": 14
+    },{
         "event": "Поламався телефон. ",
         "neg-result-description": "Витрати виявилися більшими (-12000 грн), ніж очікував.",
         "pos-result-description": "Витратив гроші (-3000 грн), але техніка працює.",
@@ -296,15 +185,8 @@
         "pos-result-value": -3000,
         "pos-result-title": "Ремонт",
         "neg-result-title": "Купити новий",
-        "id": 15,
-        "_created": "2025-03-28T08:19:14.243Z",
-        "_changed": "2025-03-28T08:19:34.557Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 1
-    },
-    {
-        "_id": "67e65bf982dee35a00010d31",
+        "id": 15
+    },{
         "event": "Отримав штраф за неправильне паркування.",
         "neg-result-description": "Довелося віддати гроші (-1000 грн), але без зайвих турбот.",
         "pos-result-description": "Вдалося уникнути витрат, але витратив багато нервів (+6 втоми).",
@@ -315,15 +197,8 @@
         "pos-result-value": 0,
         "pos-result-title": "Оскаржити штраф",
         "neg-result-title": "Заплатити",
-        "id": 16,
-        "_created": "2025-03-28T08:21:13.317Z",
-        "_changed": "2025-03-28T08:21:13.317Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 0
-    },
-    {
-        "_id": "67e65c4282dee35a00010d35",
+        "id": 16
+    },{
         "event": "Раптовий ремонт авто.",
         "neg-result-description": "Витратив більше (-10000 грн), але не втратив час.",
         "pos-result-description": " Заплатив менше (-5000 грн), але довго чекав (+5 втоми).",
@@ -334,15 +209,8 @@
         "pos-result-value": -5000,
         "pos-result-title": "Знайти дешевий сервіс",
         "neg-result-title": "Зробити швидко",
-        "id": 17,
-        "_created": "2025-03-28T08:22:26.898Z",
-        "_changed": "2025-03-28T08:22:26.898Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 0
-    },
-    {
-        "_id": "67e65d7782dee35a00010d41",
+        "id": 17
+    },{
         "event": "Загубив гаманець у транспорті.",
         "neg-result-description": "Виявилося, що шахраї скористалися карткою (-9000 грн), що ще більше засмутило (+14 втоми).",
         "pos-result-description": "Втратив лише готівку (-2000 грн), але дуже нервував (+8 втоми).",
@@ -353,15 +221,8 @@
         "pos-result-value": -2000,
         "pos-result-title": "Блокувати картки",
         "neg-result-title": "Не робити нічого",
-        "id": 18,
-        "_created": "2025-03-28T08:27:35.850Z",
-        "_changed": "2025-03-28T08:28:41.838Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 1
-    },
-    {
-        "_id": "67e65df382dee35a00010d48",
+        "id": 18
+    },{
         "event": "Поламалася пральна машина, а гарантія вже закінчилась.",
         "neg-result-description": "Витратився більше (-12000 грн), але тепер спокійний.",
         "pos-result-description": "Ремонт коштує (-5000 грн), але техніка працює. Довелося ще й чекати пів дня (+6 втоми).",
@@ -372,11 +233,6 @@
         "pos-result-value": -5000,
         "pos-result-title": "Викликати майстра",
         "neg-result-title": "Купити нову",
-        "id": 19,
-        "_created": "2025-03-28T08:29:39.034Z",
-        "_changed": "2025-03-28T08:29:39.034Z",
-        "_createdby": "detkovnikita005@gmail.com",
-        "_changedby": "detkovnikita005@gmail.com",
-        "_version": 0
+        "id": 19
     }
 ]
