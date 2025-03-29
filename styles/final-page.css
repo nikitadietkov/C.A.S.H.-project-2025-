@@ -1,0 +1,99 @@
+.final-page {
+    display: none;
+}
+
+.final-page header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.final-page header .user-hi {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.final-page header .user-hi h3 {
+    color: #fff;
+    font-family: "Geologica";
+}
+
+.final-page header .user-hi img {
+    height: 8vh;
+}
+
+.final-page main {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2em;
+
+    padding: 0 0 4% 0;
+    margin: 0 10%;
+
+    font-family: "Geologica";
+
+    border: none;
+    color: #ffffff;
+    border-radius: 30px;
+    background: #00000030;
+    box-shadow: 0 0 0 0 #004A2F90,
+        0 0 0 0 #002F3990;
+
+    transition: .4s ease-in-out;
+}
+
+.final-page main:hover {
+    box-shadow: 10px 6px 0 2px #004A2F90,
+        -8px -8px 0 6px #002F3990;
+}
+
+.final-pagemain .head {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.final-page main .head h1 {
+    font-size: 3em;
+    
+}
+
+.final-page main .head h4 {
+    width: max-content;
+}
+
+.final-page main .statistic {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+
+    width: 100%;
+    text-align: center;
+}
+
+.final-page main .statistic #chart-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    
+}
+
+.final-page main .statistic .bar {
+    width: 1.2vw;
+
+    border-radius: 3px 3px 0 0;
+    background-color: rgb(0, 154, 255);
+    transition: 0.3s ease-in-out;
+}
+
+.final-page main .statistic .baseline {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+
+    background: linear-gradient(to right, #00000000 1%, #00000030, #00000000 99%);
+}

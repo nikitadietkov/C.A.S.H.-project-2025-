@@ -1,0 +1,110 @@
+.game {
+    display: none;
+}
+
+.game header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.game header .logo {
+    align-self: flex-start;
+}
+
+.game header .state-value {
+    display: flex;
+    align-items: center;
+}
+
+.game header .state-value h2 {
+    color: white;
+    font-size: 2em;
+    font-family: "Geologica";
+}
+
+.game header .state-value #fatique-value-html {
+    outline: none;
+    cursor: default;
+    user-select: none;
+}
+
+.game .card-task {
+    display: flex;
+    flex-direction: column;
+
+
+    width: 80%;
+    padding: 1%;
+    margin: 0 auto;
+
+    color: #fff;
+    text-align: center;
+    font-family: "Geologica";
+
+    border-radius: 25px;
+    background: #00000080;
+
+    h2 {
+        padding: 5% 0;
+        border-radius: 20px;
+        background: #123524;
+    }
+}
+
+.game .choice-html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1em;
+
+    margin: 3% 5%;
+
+    div {
+        display: flex;
+        justify-content: space-between; 
+    }
+}
+
+.game .choice-html .result-html  {
+    button {
+        height: 50%;
+        width: 30%;
+        padding: 2% ;
+        
+        color: #EFE3C2;
+        font-size: 1.5em;
+        font-family: "Geologica";
+
+        border: none;
+        cursor: pointer;
+        border-radius: 15px;
+        background-color: #3E7B27;
+    }
+    h3 {
+        width: 60%;
+        text-align: end;
+        display: none;
+        opacity: 0;
+    }
+
+}
+.game #next-task-html {
+    display: none;
+    padding: .7em 1.5em;
+    margin: 0 auto;
+    height: 0;
+    top: 0;
+
+    font-size: 2em;
+    font-weight: 900;
+    font-family: "Geologica";
+
+    opacity: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #123524;
+    border-radius: 15px;
+    background-color: #85A947;
+}

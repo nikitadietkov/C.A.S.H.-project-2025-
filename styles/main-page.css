@@ -1,0 +1,125 @@
+.main-page {
+    /* display: none !important; */
+    display: flex;
+    flex-direction: column;
+}
+
+.main-page main {
+    height: 60vh;
+}
+
+.main-page .slider {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0 auto;
+
+    width: 1252px;
+}
+
+.main-page .slide {
+    /* position: absolute; */
+
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    grid-gap: 1em;
+    justify-content: space-between;
+
+    height: max-content;
+    padding: 2% 2% 2% 6%;
+
+    color: white;
+    border-radius: 45px;
+    border: 1px solid white;
+    background-color: #00000080;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+.main-page .slide:hover {
+    transform: translate(16px, 8px);
+    box-shadow: -16px -16px #ffffff77;
+}
+
+.slick-slide {
+    margin: 20px;
+}
+
+.slick-dots {
+    position: absolute;
+    width: min-content;
+    right: -30px;
+    list-style: none;
+}
+
+.slick-dots li button {
+    width: 30px;
+    height: 30px;
+    margin: 6px 0;
+
+    border-radius: 45px;
+    border: 1px solid white;
+    background-color: #00000080;
+    transition: .4s;
+}
+
+.slick-dots li.slick-active button {
+    border: 1px solid #00000080;
+    background-color: #ffffff;
+}
+
+.main-page .slide .slider-text {
+    align-self: center;
+
+    height: max-content;
+    text-align: start;
+    font-size: 1.3vw;
+    font-family: "Geologica";
+
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+.main-page .slide .slider-text b {
+    font-weight: 600;
+    color: #000000;
+    line-height: 1.8;
+    border-radius: 5px;
+    padding: 2px 5px 5px;
+    background-color: #fff;
+}
+
+.main-page .slide img {
+    width: 100%;
+    border-radius: 45px;
+}
+
+.main-page footer .start-quest {
+    margin-top: 3%;
+    padding: 2.5vh 4vw;
+
+    color: #ffffff;
+
+    font-size: 2vw;
+    font-family: "Rubik Mono One";
+
+    align-self: center;
+    border-radius: 45px;
+    border: .1px solid white;
+    background-color: #00000080;
+
+    transition: .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.main-page footer .start-quest:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.main-page footer {
+    display: flex;
+    justify-content: center;
+}

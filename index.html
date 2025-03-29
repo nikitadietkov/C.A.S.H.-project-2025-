@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="icon" href="images/logo/logo.png">
+
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="scripts/jquery.knob.js" defer></script>
     <script src="scripts/slider.js" defer></script>
-    <script src="scripts/game.js"></script>
+    <script src="scripts/game.js" defer></script>
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/game/balance-choice.css">
+    <link rel="stylesheet" href="styles/game/cards.css">
+    <link rel="stylesheet" href="styles/final-page.css">
+    <link rel="stylesheet" href="styles/main-page.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <section class="main-page">
@@ -38,7 +44,7 @@
                         <span><b>Твої</b> рішення визначать,</span>
                         <span>наскільки добре ти впораєшся із фінансовими викликами.</span>
                     </div>
-                    <img src="images/main-page/slider/1.jpg" alt="" class="slider-image">
+                    <img src="images/main-page/slider/2.jpg" alt="" class="slider-image">
                 </div>
                 <div class="slide">
                     <div class="slider-text background-selected">
@@ -48,7 +54,7 @@
                         <span>із <b>будь-якої</b> ситуації.</span>
                         <span>Будь готовий <b>приймати виклики</b> та <b>адаптуватися</b> до змін!</span>
                     </div>
-                    <img src="images/main-page/slider/1.jpg" alt="" class="slider-image">
+                    <img src="images/main-page/slider/3.jpg" alt="" class="slider-image">
                 </div>
                 <div class="slide">
                     <div class="slider-text background-selected">
@@ -58,13 +64,53 @@
                         <span>В кінці ти побачиш <b>свій</b></span>
                         <span>фінансовий результат та зможеш оцінити <b>свої навички!</b></span>
                     </div>
-                    <img src="images/main-page/slider/1.jpg" alt="" class="slider-image">
+                    <img src="images/main-page/slider/4.jpg" alt="" class="slider-image">
                 </div>
             </div>
         </main>
         <footer>
             <button class="start-quest" id="quest-start">ПОЧАТИ</button>
         </footer>
+    </section>
+
+    <section class="card-balance">
+        <header>
+            <img class="logo" src="images/logo/logo-full--white.png" alt="">
+        </header>
+        <main>
+            <div class="text">
+                <h2>Обери свій баланс</h2>
+                <h1>4000₴</h1>
+            </div>
+            <div class="inputs">
+                <input id="balance-input-range" type="range" value="100" step="10" min="500" max="10000">
+                <button id="balance-continue">ПРОДОВЖИТИ</button>
+            </div>
+        </main>
+    </section>
+
+    <section class="game"></section>
+
+    <section class="final-page">
+        <header>
+            <img class="logo" src="images/logo/logo-full--white.png" alt="">
+            <div class="user-hi">
+                <h3>Congratulations!</h3>
+                <img src="images/user-profile/user.svg" alt="">
+            </div>
+        </header>
+        <main>
+            <div class="head">
+                <h1>Твій баланс: 123$</h1>
+            </div>
+            <h2>Твій фінансовий прогрес під час гри</h2>
+            <div class="statistic">
+                <div id="chart-container">
+
+                </div>
+                <div class="baseline"></div>
+            </div>
+        </main>
     </section>
 </body>
 </html>
