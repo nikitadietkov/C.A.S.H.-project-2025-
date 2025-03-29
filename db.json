@@ -25,7 +25,7 @@
         "neg-result-description": "Ви залишилися друзями, але він трохи образився (+2 втоми).",
         "probability": 0.25,
         "pos-result-value": -5000,
-        "neg-result-value": -0.03,
+        "neg-result-value": 0,
         "event": "Друг попросив позичити гроші.",
         "_created": "2025-03-15T18:37:49.860Z",
         "_changed": "2025-03-27T18:53:22.840Z",

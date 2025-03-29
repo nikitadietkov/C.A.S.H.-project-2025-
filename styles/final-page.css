@@ -23,14 +23,14 @@
 }
 
 .final-page main {
-    height: 70vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
     gap: 2em;
 
-    padding: 0 0 4% 0;
+    padding: 2% 0 4% 0;
     margin: 0 10%;
 
     font-family: "Geologica";
@@ -50,19 +50,16 @@
         -8px -8px 0 6px #002F3990;
 }
 
-.final-pagemain .head {
+.final-page .head {
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 2em;   
+    text-align: center;
 }
 
 .final-page main .head h1 {
     font-size: 3em;
-    
-}
-
-.final-page main .head h4 {
-    width: max-content;
 }
 
 .final-page main .statistic {

@@ -70,7 +70,7 @@
     display: flex;
     justify-content: center;
     button {
-        height: 50%;
+        height: max-content;
         width: 30%;
         padding: 2% ;
         
