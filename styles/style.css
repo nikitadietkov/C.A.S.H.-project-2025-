@@ -22,7 +22,6 @@
 
 body {
     min-height: 100vh;
-    max-height: max-content;
     background: rgb(20, 20, 20);
     background: radial-gradient(circle, rgb(4, 73, 50) 0%, rgba(34, 60, 53, 1) 10%, rgb(20, 20, 20) 100%);
     background-size: contain;
@@ -40,10 +39,9 @@ header .logo {
 @media (max-width: 900px) {
     header .logo {
         height: 6vh;
-        /* Уменьшаем высоту логотипа */
     }
 
     body {
-        height: 93vh;
+        min-height: 93vh;
     }
 }

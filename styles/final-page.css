@@ -67,23 +67,24 @@
 }
 
 .final-page main .statistic #chart-container {
+    position: relative;
     display: flex;
     align-items: flex-end;
-    gap: 10px;
+    gap: 5px;
 }
 
-.final-page main .statistic .bar {
+.final-page main .statistic .histogram-bar {
     border-radius: 3px 3px 0 0;
     background-color: #27548A;
     transition: 0.3s ease-in-out;
 }
 
-.final-page main .statistic .bar h2 {
-    font-size: 70%;
+.final-page main .statistic .histogram-bar h2 {
+    font-size: 100%;
     user-select: none;
 }
 
-.final-page main .statistic .bar:hover h2 {
+.final-page main .statistic .histogram-bar:hover h2 {
     transform: scale(1.2);
 }
 

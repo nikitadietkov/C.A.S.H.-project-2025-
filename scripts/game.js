@@ -18,7 +18,8 @@ if (localStorage.getItem("game")) {
         fatigue: 0,
         historyBalance: [],
         historyFatigue: [],
-        endPhrases: []
+        endPhrases: [],
+        taskChoosen: false
     };
     getData(); // Отримуємо дані для гри
 }
@@ -75,7 +76,8 @@ $("#restart-button").on("click", function () {
         fatigue: 0,
         historyBalance: [],
         historyFatigue: [],
-        endPhrases: []
+        endPhrases: [],
+        taskChoosen: false
     };
 
     // Показати вибір балансу
@@ -135,6 +137,7 @@ function generateTask() {
     const count = gameState.data.length;
     const randomTask = gameState.data.splice(Math.floor(Math.random() * count), 1)[0]; // Випадкове завдання
     gameState.task = randomTask; // Зберегти завдання в стан
+    gameState.taskChosen = false;
     updateLocalStorage(); // Оновити localStorage
     drawTask(); // Намалювати завдання
 }
@@ -150,25 +153,51 @@ function drawTask(element = null) {
             </div>
         </header>`;
 
-    let taskElement = element || `
-        <div class="card-task">
-            <h2>${gameState.task.event}</h2>
-            <div class="choice-html">
-                <div class="pos-result-html result-html">
-                    <button id="pos-result-value-html" onclick="showDescription(1)">${gameState.task['pos-result-title']}</button>
+    let taskElement;
+
+    if (gameState.taskChosen) {
+        // Показати обраний варіант
+        const choiceType = gameState.lastChoiceType || 'pos'; // збережи lastChoiceType в showDescription
+        const resultTitle = gameState.task[`${choiceType}-result-title`];
+        const resultDescription = gameState.task[`${choiceType}-result-description`];
+
+        taskElement = `
+            <div class="card-task">
+                <h2>${gameState.task.event}</h2>
+                <div class="choice-html">
+                    <div class="${choiceType}-result-html result-html">
+                        <h3 class="${choiceType}-result-descripton-html">${resultDescription}</h3>
+                    </div>
+                    <div class="continue">
+                        <button id="next-task-html" onclick="continueGame('${choiceType}')">ПРОДОВЖИТИ</button>
+                    </div>
                 </div>
-                <div class="neg-result-html result-html">
-                    <button id="neg-result-value-html" onclick="showDescription(0)">${gameState.task['neg-result-title']}</button>
+            </div>`;
+    } else {
+        // Якщо ще не обрано — показати варіанти
+        taskElement = `
+            <div class="card-task">
+                <h2>${gameState.task.event}</h2>
+                <div class="choice-html">
+                    <div class="pos-result-html result-html">
+                        <button id="pos-result-value-html" onclick="showDescription(1)">${gameState.task['pos-result-title']}</button>
+                    </div>
+                    <div class="neg-result-html result-html">
+                        <button id="neg-result-value-html" onclick="showDescription(0)">${gameState.task['neg-result-title']}</button>
+                    </div>
                 </div>
-            </div>
-        </div>`;
-    $(".game").html(header + taskElement); // Додати заголовок та елемент завдання
-    $(".card-task").hide().fadeIn(300); // Показати завдання з анімацією
-    drawKnob(); // Намалювати контрольну ручку
+            </div>`;
+    }
+    $(".game").html(header + taskElement);
+    $(".game .result-html h3").show(300).animate({ opacity: 1, height: '100%' })
+    $(".game #next-task-html").show(300).animate({opacity: 1, height: '100%'})
+    $(".card-task").hide().fadeIn(300);
+    drawKnob();
 }
 
 // Функція для показу опису вибору
 function showDescription(id) {
+    if (gameState.taskChosen) return;
     const choiceType = id ? 'pos' : 'neg'; // Визначити тип вибору
     const resultTitle = gameState.task[`${choiceType}-result-title`];
     const resultDescription = gameState.task[`${choiceType}-result-description`];
@@ -191,6 +220,9 @@ function showDescription(id) {
         $(`.${choiceType}-result-descripton-html`).show().animate({ opacity: 1 }, 300);
         $("#next-task-html").show().animate({ height: '100px', opacity: 1 });
     });
+    gameState.taskChosen = true;
+    gameState.lastChoiceType = choiceType; // Зберігаємо
+    updateLocalStorage();
 }
 
 // Функція для продовження гри після вибору
@@ -291,48 +323,40 @@ function createHistogram(data) {
     data.forEach((val, index) => {
         const barHeight = isMobile ? "20px" : (val / maxValue) * 30 + 'vh';
         const barLength = isMobile ? (val / maxValue) * (containerWidth - 80) + "px" : (containerWidth / data.length) / 40 + 'vw';
-        const minVal = val < 1000; 
-
-        if (isBalance) {
-            var $bar = $(`<div class="histogram-bar" style="width: 0; height: ${barHeight};"><h2>${val}</h2></div>`).css({
-                backgroundColor: index % 2 === 0 ? '#205781' : '#4F959D',
-                display: 'flex',
-                alignItems: isMobile ? 'center' : 'flex-start',
-                justifyContent: isMobile ? 'flex-start' : 'flex-end',
-                color: '#fff',
-                fontSize: isMobile ? '60%' : '70%',
-                transition: 'width 0.5s ease',
-                padding: isMobile ? minVal ? '0 0 0 10px' : 0 : 0,
-                borderRadius: isMobile ? '5px 0 0 5px' : '5px 5px 0 0',
-            });
-        } else {
-            $bar = $(`<div class="histogram-bar" style="width: 0; height: ${barHeight};"><h2>${val}</h2></div>`).css({
-                backgroundColor: index % 2 === 0 ? '#FE4F2D' : '#015551',
-                display: 'flex',
-                alignItems: isMobile ? 'center' : 'flex-start',
-                justifyContent: isMobile ? 'flex-start' : 'flex-end',
-                color: '#fff',
-                minWidth: '5%',
-                padding: isMobile ? '0 0 0 5px' : 0,
-                borderRadius: isMobile ? '5px 0 0 5px' : '5px 5px 0 0',
-                fontSize: isMobile ? '60%' : '100%',
-                transition: 'width 0.5s ease',
-                
-            });
-        }
+        const minVal = val < 1000;
+        
+        var $bar = $('<div class="histogram-bar" style="width: 0; height: ' + barHeight + ';"></div>').css({
+            backgroundColor: index % 2 === 0 ? (isBalance ? '#205781' : '#FE4F2D') : (isBalance ? '#4F959D' : '#015551'),
+            display: 'flex',
+            alignItems: isMobile ? 'center' : 'flex-start',
+            justifyContent: isMobile ? 'flex-start' : 'flex-end',
+            color: '#fff',
+            fontSize: isMobile ? '60%' : isBalance ? '80%' : '100%',
+            color: index % 2 === 0 ? (isBalance ? '#4F959D' : '#015551') : (isBalance ? '#205781' : '#FE4F2D'),
+            transition: 'width 0.5s ease',
+            padding: isMobile ? minVal ? '0 0 0 10px' : 0 : '5px',
+            borderRadius: isMobile ? '5px 0 0 5px' : '5px 5px 0 0',
+            position: 'relative'
+        });
+        
+        var $label = $('<h2>' + val + '</h2>').css({
+            position: 'absolute',
+            margin: 'auto 0',
+            bottom: isMobile ? '20%' : '-30px',
+            left: isMobile ? isBalance ? '2%': '2vw' : '50%',
+            transform: isMobile ? 'translateX(0)' : 'translateX(-50%)',
+            whiteSpace: 'nowrap',
+        });
         
         
+        $bar.append($label);
         $('#chart-container').append($bar);
-
         setTimeout(() => {
             $bar.css('width', barLength);
         }, 10);
     });
-
-    $('.histogram-bar h2').css({
-        width: isMobile ? 'auto' : '100%'
-    });
 }
+
 
 // Функція для малювання контрольної ручки
 function drawKnob() {
