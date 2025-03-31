@@ -23,25 +23,21 @@
 }
 
 .final-page main {
-    height: 50vh;
+    height: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
     gap: 2em;
-
     padding: 2% 0 4% 0;
     margin: 0 10%;
-
     font-family: "Geologica";
-
     border: none;
     color: #ffffff;
     border-radius: 30px;
     background: #00000030;
     box-shadow: 0 0 0 0 #004A2F90,
         0 0 0 0 #002F3990;
-
     transition: .4s ease-in-out;
 }
 
@@ -54,7 +50,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 2em;   
+    gap: 2em;
     text-align: center;
 }
 
@@ -66,8 +62,6 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    
-
     width: 100%;
     text-align: center;
 }
@@ -76,21 +70,83 @@
     display: flex;
     align-items: flex-end;
     gap: 10px;
-    
 }
 
 .final-page main .statistic .bar {
-    width: 1.2vw;
-
     border-radius: 3px 3px 0 0;
-    background-color: rgb(0, 154, 255);
+    background-color: #27548A;
     transition: 0.3s ease-in-out;
+}
+
+.final-page main .statistic .bar h2 {
+    font-size: 70%;
+    user-select: none;
+}
+
+.final-page main .statistic .bar:hover h2 {
+    transform: scale(1.2);
 }
 
 .final-page main .statistic .baseline {
     position: absolute;
     height: 2px;
     width: 100%;
-
     background: linear-gradient(to right, #00000000 1%, #00000030, #00000000 99%);
+}
+
+.final-page main #restart-button {
+    padding: 1em 2em;
+    font-size: 1.5em;
+    font-family: "Geologica";
+    color: #ffffff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.final-page main #restart-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .final-page .user-hi h3 {
+        font-size: .7em;
+        text-align: end;
+    }
+
+    .final-page main {
+        padding: 2% 5%;
+        margin: 0;
+        width: 90%;
+        border-radius: 15px;
+    }
+
+    .final-page main:hover {
+        box-shadow: none;
+    }
+
+    .final-page main .head h1 {
+        font-size: 1.5em;
+    }
+
+    .final-page main head h2 {
+        font-size: 1em;
+    }
+
+    .final-page main .statistic #chart-container {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .final-page main .statistic .bar {
+        min-width: 15px;
+        margin: 0;
+    }
+
+    .final-page main .statistic .baseline {
+        display: none;
+    }
 }
