@@ -317,7 +317,7 @@ function createHistogram(data) {
     $('#chart-container').empty(); // Очищаем контейнер
     const maxValue = Math.max(...data);
     const containerWidth = $(window).width();
-    const isMobile = containerWidth < 600;
+    const isMobile = containerWidth <= 900;
     const isBalance = data == gameState.historyBalance;
 
     data.forEach((val, index) => {
